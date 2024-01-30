@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\IDraw.cs" />
+    <Compile Include="Entities\MyCircle.cs" />
+    <Compile Include="Entities\MyPoint.cs" />
+    <Compile Include="Entities\MyRectangle.cs" />
+    <Compile Include="Entities\Shape.cs" />
     <Compile Include="GraphicForm.cs">
       <SubType>Form</SubType>
     </Compile>
