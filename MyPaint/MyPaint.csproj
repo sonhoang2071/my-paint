@@ -70,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,6 +84,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color-picker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rounded-rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polygon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
