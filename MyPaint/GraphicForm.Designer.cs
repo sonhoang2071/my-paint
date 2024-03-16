@@ -36,7 +36,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button25 = new System.Windows.Forms.Button();
+            this.colorDialog = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
@@ -44,20 +44,18 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnRightTriangle = new System.Windows.Forms.Button();
+            this.rbTriangle = new System.Windows.Forms.Button();
+            this.btnRoundedRect = new System.Windows.Forms.Button();
+            this.rbRectangle2 = new System.Windows.Forms.Button();
+            this.rdCircle = new System.Windows.Forms.Button();
+            this.btnRightArround = new System.Windows.Forms.Button();
+            this.btnDownArrow = new System.Windows.Forms.Button();
+            this.btnUpArrow = new System.Windows.Forms.Button();
+            this.btnLeftArround = new System.Windows.Forms.Button();
+            this.btnPentagon = new System.Windows.Forms.Button();
+            this.btndiamond = new System.Windows.Forms.Button();
+            this.btnLine = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -71,6 +69,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.brush = new System.Windows.Forms.Button();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.rdpattern = new System.Windows.Forms.RadioButton();
+            this.rdNoPattern = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
@@ -78,6 +83,8 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbRectangle
@@ -97,11 +104,11 @@
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.rbCircle);
             this.groupBox1.Controls.Add(this.rbRectangle);
-            this.groupBox1.Location = new System.Drawing.Point(1097, 11);
+            this.groupBox1.Location = new System.Drawing.Point(723, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(111, 174);
+            this.groupBox1.Size = new System.Drawing.Size(111, 93);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shapes";
@@ -147,7 +154,7 @@
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.rbPoint);
             this.groupBox2.Controls.Add(this.rbVector);
-            this.groupBox2.Location = new System.Drawing.Point(978, 22);
+            this.groupBox2.Location = new System.Drawing.Point(840, 12);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -158,7 +165,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSave.Location = new System.Drawing.Point(872, 43);
+            this.btnSave.Location = new System.Drawing.Point(723, 113);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
@@ -167,19 +174,19 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button25
+            // colorDialog
             // 
-            this.button25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.colorDialog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button25.Image = global::MyPaint.Properties.Resources.colors__1_;
-            this.button25.Location = new System.Drawing.Point(12, 3);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(69, 66);
-            this.button25.TabIndex = 9;
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
+            this.colorDialog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.colorDialog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.colorDialog.Image = global::MyPaint.Properties.Resources.colors__1_;
+            this.colorDialog.Location = new System.Drawing.Point(12, 3);
+            this.colorDialog.Name = "colorDialog";
+            this.colorDialog.Size = new System.Drawing.Size(69, 66);
+            this.colorDialog.TabIndex = 9;
+            this.colorDialog.UseVisualStyleBackColor = true;
+            this.colorDialog.Click += new System.EventHandler(this.button25_Click);
             // 
             // button22
             // 
@@ -194,7 +201,7 @@
             this.button22.Text = "2px";
             this.button22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button21_Click);
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button24
             // 
@@ -209,7 +216,7 @@
             this.button24.Text = "4px";
             this.button24.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button21_Click);
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button23
             // 
@@ -224,7 +231,7 @@
             this.button23.Text = "3px";
             this.button23.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button21_Click);
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button21
             // 
@@ -277,174 +284,161 @@
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnRightTriangle
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button8.Image = global::MyPaint.Properties.Resources.curve;
-            this.button8.Location = new System.Drawing.Point(251, 22);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(43, 46);
-            this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnRightTriangle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRightTriangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRightTriangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRightTriangle.Image = global::MyPaint.Properties.Resources.triangle__3_;
+            this.btnRightTriangle.Location = new System.Drawing.Point(285, 11);
+            this.btnRightTriangle.Name = "btnRightTriangle";
+            this.btnRightTriangle.Size = new System.Drawing.Size(43, 46);
+            this.btnRightTriangle.TabIndex = 7;
+            this.btnRightTriangle.UseVisualStyleBackColor = true;
+            this.btnRightTriangle.Click += new System.EventHandler(this.btnRightTriangle_Click);
             // 
-            // button14
+            // rbTriangle
             // 
-            this.button14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button14.Image = global::MyPaint.Properties.Resources.triangle__3_;
-            this.button14.Location = new System.Drawing.Point(496, 74);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(43, 46);
-            this.button14.TabIndex = 7;
-            this.button14.UseVisualStyleBackColor = true;
+            this.rbTriangle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbTriangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.rbTriangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rbTriangle.Image = global::MyPaint.Properties.Resources.triangle__2_;
+            this.rbTriangle.Location = new System.Drawing.Point(236, 11);
+            this.rbTriangle.Name = "rbTriangle";
+            this.rbTriangle.Size = new System.Drawing.Size(43, 46);
+            this.rbTriangle.TabIndex = 7;
+            this.rbTriangle.UseVisualStyleBackColor = true;
+            this.rbTriangle.Click += new System.EventHandler(this.rbTriangle_Click);
             // 
-            // button13
+            // btnRoundedRect
             // 
-            this.button13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button13.Image = global::MyPaint.Properties.Resources.triangle__2_;
-            this.button13.Location = new System.Drawing.Point(496, 22);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(43, 46);
-            this.button13.TabIndex = 7;
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnRoundedRect.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRoundedRect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRoundedRect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRoundedRect.Image = global::MyPaint.Properties.Resources.rounded_rectangle;
+            this.btnRoundedRect.Location = new System.Drawing.Point(187, 11);
+            this.btnRoundedRect.Name = "btnRoundedRect";
+            this.btnRoundedRect.Size = new System.Drawing.Size(43, 46);
+            this.btnRoundedRect.TabIndex = 7;
+            this.btnRoundedRect.UseVisualStyleBackColor = true;
+            this.btnRoundedRect.Click += new System.EventHandler(this.btnRoundedRect_Click);
             // 
-            // button12
+            // rbRectangle2
             // 
-            this.button12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button12.Image = global::MyPaint.Properties.Resources.polygon;
-            this.button12.Location = new System.Drawing.Point(447, 22);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(43, 46);
-            this.button12.TabIndex = 7;
-            this.button12.UseVisualStyleBackColor = true;
+            this.rbRectangle2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbRectangle2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.rbRectangle2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rbRectangle2.Image = global::MyPaint.Properties.Resources.rectangle;
+            this.rbRectangle2.Location = new System.Drawing.Point(138, 11);
+            this.rbRectangle2.Name = "rbRectangle2";
+            this.rbRectangle2.Size = new System.Drawing.Size(43, 46);
+            this.rbRectangle2.TabIndex = 7;
+            this.rbRectangle2.UseVisualStyleBackColor = true;
+            this.rbRectangle2.Click += new System.EventHandler(this.rbRectangle2_Click);
             // 
-            // button11
+            // rdCircle
             // 
-            this.button11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button11.Image = global::MyPaint.Properties.Resources.rounded_rectangle;
-            this.button11.Location = new System.Drawing.Point(398, 22);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(43, 46);
-            this.button11.TabIndex = 7;
-            this.button11.UseVisualStyleBackColor = true;
+            this.rdCircle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdCircle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.rdCircle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rdCircle.Image = global::MyPaint.Properties.Resources.circle;
+            this.rdCircle.Location = new System.Drawing.Point(89, 10);
+            this.rdCircle.Name = "rdCircle";
+            this.rdCircle.Size = new System.Drawing.Size(43, 46);
+            this.rdCircle.TabIndex = 7;
+            this.rdCircle.UseVisualStyleBackColor = true;
+            this.rdCircle.Click += new System.EventHandler(this.rdCircle_Click);
             // 
-            // button10
+            // btnRightArround
             // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button10.Image = global::MyPaint.Properties.Resources.rectangle;
-            this.button10.Location = new System.Drawing.Point(349, 22);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(43, 46);
-            this.button10.TabIndex = 7;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnRightArround.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRightArround.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRightArround.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRightArround.Image = global::MyPaint.Properties.Resources.right_arrow;
+            this.btnRightArround.Location = new System.Drawing.Point(138, 62);
+            this.btnRightArround.Name = "btnRightArround";
+            this.btnRightArround.Size = new System.Drawing.Size(43, 46);
+            this.btnRightArround.TabIndex = 7;
+            this.btnRightArround.UseVisualStyleBackColor = true;
+            this.btnRightArround.Click += new System.EventHandler(this.btnRightArround_Click);
             // 
-            // button9
+            // btnDownArrow
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button9.Image = global::MyPaint.Properties.Resources.circle;
-            this.button9.Location = new System.Drawing.Point(300, 22);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(43, 46);
-            this.button9.TabIndex = 7;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnDownArrow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDownArrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnDownArrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDownArrow.Image = global::MyPaint.Properties.Resources.down_arrow;
+            this.btnDownArrow.Location = new System.Drawing.Point(285, 60);
+            this.btnDownArrow.Name = "btnDownArrow";
+            this.btnDownArrow.Size = new System.Drawing.Size(43, 46);
+            this.btnDownArrow.TabIndex = 7;
+            this.btnDownArrow.UseVisualStyleBackColor = true;
+            this.btnDownArrow.Click += new System.EventHandler(this.btnDownArrow_Click);
             // 
-            // button18
+            // btnUpArrow
             // 
-            this.button18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button18.Image = global::MyPaint.Properties.Resources.right_arrow;
-            this.button18.Location = new System.Drawing.Point(300, 74);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(43, 46);
-            this.button18.TabIndex = 7;
-            this.button18.UseVisualStyleBackColor = true;
+            this.btnUpArrow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnUpArrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnUpArrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnUpArrow.Image = global::MyPaint.Properties.Resources.up_arrow;
+            this.btnUpArrow.Location = new System.Drawing.Point(236, 62);
+            this.btnUpArrow.Name = "btnUpArrow";
+            this.btnUpArrow.Size = new System.Drawing.Size(43, 46);
+            this.btnUpArrow.TabIndex = 7;
+            this.btnUpArrow.UseVisualStyleBackColor = true;
+            this.btnUpArrow.Click += new System.EventHandler(this.btnUpArrow_Click);
             // 
-            // button20
+            // btnLeftArround
             // 
-            this.button20.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button20.Image = global::MyPaint.Properties.Resources.down_arrow;
-            this.button20.Location = new System.Drawing.Point(447, 74);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(43, 46);
-            this.button20.TabIndex = 7;
-            this.button20.UseVisualStyleBackColor = true;
+            this.btnLeftArround.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLeftArround.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnLeftArround.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLeftArround.Image = global::MyPaint.Properties.Resources.left_arrow;
+            this.btnLeftArround.Location = new System.Drawing.Point(187, 63);
+            this.btnLeftArround.Name = "btnLeftArround";
+            this.btnLeftArround.Size = new System.Drawing.Size(43, 46);
+            this.btnLeftArround.TabIndex = 7;
+            this.btnLeftArround.UseVisualStyleBackColor = true;
+            this.btnLeftArround.Click += new System.EventHandler(this.btnLeftArround_Click);
             // 
-            // button19
+            // btnPentagon
             // 
-            this.button19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button19.Image = global::MyPaint.Properties.Resources.up_arrow;
-            this.button19.Location = new System.Drawing.Point(398, 74);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(43, 46);
-            this.button19.TabIndex = 7;
-            this.button19.UseVisualStyleBackColor = true;
+            this.btnPentagon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPentagon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnPentagon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPentagon.Image = global::MyPaint.Properties.Resources.shape;
+            this.btnPentagon.Location = new System.Drawing.Point(89, 62);
+            this.btnPentagon.Name = "btnPentagon";
+            this.btnPentagon.Size = new System.Drawing.Size(43, 46);
+            this.btnPentagon.TabIndex = 7;
+            this.btnPentagon.UseVisualStyleBackColor = true;
+            this.btnPentagon.Click += new System.EventHandler(this.btnPentagon_Click);
             // 
-            // button17
+            // btndiamond
             // 
-            this.button17.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button17.Image = global::MyPaint.Properties.Resources.left_arrow;
-            this.button17.Location = new System.Drawing.Point(349, 74);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(43, 46);
-            this.button17.TabIndex = 7;
-            this.button17.UseVisualStyleBackColor = true;
+            this.btndiamond.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btndiamond.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btndiamond.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btndiamond.Image = global::MyPaint.Properties.Resources.diamond__2_;
+            this.btndiamond.Location = new System.Drawing.Point(40, 60);
+            this.btndiamond.Name = "btndiamond";
+            this.btndiamond.Size = new System.Drawing.Size(43, 46);
+            this.btndiamond.TabIndex = 7;
+            this.btndiamond.UseVisualStyleBackColor = true;
+            this.btndiamond.Click += new System.EventHandler(this.btndiamond_Click);
             // 
-            // button16
+            // btnLine
             // 
-            this.button16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button16.Image = global::MyPaint.Properties.Resources.shape;
-            this.button16.Location = new System.Drawing.Point(251, 74);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(43, 46);
-            this.button16.TabIndex = 7;
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button15.Image = global::MyPaint.Properties.Resources.diamond__2_;
-            this.button15.Location = new System.Drawing.Point(202, 74);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(43, 46);
-            this.button15.TabIndex = 7;
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button7.Image = global::MyPaint.Properties.Resources.line;
-            this.button7.Location = new System.Drawing.Point(202, 22);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(43, 46);
-            this.button7.TabIndex = 7;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnLine.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLine.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnLine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLine.Image = global::MyPaint.Properties.Resources.line;
+            this.btnLine.Location = new System.Drawing.Point(40, 10);
+            this.btnLine.Name = "btnLine";
+            this.btnLine.Size = new System.Drawing.Size(43, 46);
+            this.btnLine.TabIndex = 7;
+            this.btnLine.UseVisualStyleBackColor = true;
+            this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
             // 
             // button3
             // 
@@ -484,13 +478,11 @@
             // 
             // pic
             // 
-            this.pic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic.Location = new System.Drawing.Point(-4, 201);
+            this.pic.Location = new System.Drawing.Point(-68, 214);
             this.pic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(1222, 413);
+            this.pic.Size = new System.Drawing.Size(2366, 746);
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             this.pic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawing_MouseDown);
@@ -502,7 +494,7 @@
             this.button26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button26.Location = new System.Drawing.Point(872, 83);
+            this.button26.Location = new System.Drawing.Point(723, 148);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(100, 28);
             this.button26.TabIndex = 10;
@@ -534,9 +526,21 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnDownArrow);
+            this.panel2.Controls.Add(this.rdCircle);
+            this.panel2.Controls.Add(this.rbRectangle2);
+            this.panel2.Controls.Add(this.btnRoundedRect);
+            this.panel2.Controls.Add(this.rbTriangle);
+            this.panel2.Controls.Add(this.btnRightTriangle);
+            this.panel2.Controls.Add(this.btnUpArrow);
+            this.panel2.Controls.Add(this.btnLeftArround);
+            this.panel2.Controls.Add(this.btnLine);
+            this.panel2.Controls.Add(this.btndiamond);
+            this.panel2.Controls.Add(this.btnPentagon);
+            this.panel2.Controls.Add(this.btnRightArround);
             this.panel2.Location = new System.Drawing.Point(193, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(354, 137);
+            this.panel2.Size = new System.Drawing.Size(364, 137);
             this.panel2.TabIndex = 12;
             // 
             // label2
@@ -574,8 +578,8 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.button25);
-            this.panel4.Location = new System.Drawing.Point(721, 32);
+            this.panel4.Controls.Add(this.colorDialog);
+            this.panel4.Location = new System.Drawing.Point(1087, 97);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(96, 102);
             this.panel4.TabIndex = 14;
@@ -594,11 +598,88 @@
             this.label4.Text = "Color";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.brush);
+            this.panel5.Location = new System.Drawing.Point(957, 97);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(113, 102);
+            this.panel5.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(8, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Brush Color";
+            this.label5.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // brush
+            // 
+            this.brush.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.brush.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.brush.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.brush.Image = global::MyPaint.Properties.Resources.colors__1_;
+            this.brush.Location = new System.Drawing.Point(12, 4);
+            this.brush.Name = "brush";
+            this.brush.Size = new System.Drawing.Size(86, 66);
+            this.brush.TabIndex = 9;
+            this.brush.UseVisualStyleBackColor = true;
+            this.brush.Click += new System.EventHandler(this.brush_Click);
+            // 
+            // rdpattern
+            // 
+            this.rdpattern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdpattern.AutoSize = true;
+            this.rdpattern.Location = new System.Drawing.Point(30, 23);
+            this.rdpattern.Name = "rdpattern";
+            this.rdpattern.Size = new System.Drawing.Size(70, 20);
+            this.rdpattern.TabIndex = 15;
+            this.rdpattern.TabStop = true;
+            this.rdpattern.Text = "Pattern";
+            this.rdpattern.UseVisualStyleBackColor = true;
+            // 
+            // rdNoPattern
+            // 
+            this.rdNoPattern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdNoPattern.AutoSize = true;
+            this.rdNoPattern.Location = new System.Drawing.Point(30, 54);
+            this.rdNoPattern.Name = "rdNoPattern";
+            this.rdNoPattern.Size = new System.Drawing.Size(91, 20);
+            this.rdNoPattern.TabIndex = 16;
+            this.rdNoPattern.TabStop = true;
+            this.rdNoPattern.Text = "No Pattern";
+            this.rdNoPattern.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.rdpattern);
+            this.groupBox3.Controls.Add(this.rdNoPattern);
+            this.groupBox3.Location = new System.Drawing.Point(957, 14);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox3.Size = new System.Drawing.Size(131, 77);
+            this.groupBox3.TabIndex = 17;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Pattern";
+            // 
             // GraphicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 614);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button24);
@@ -607,20 +688,6 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -631,6 +698,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GraphicForm";
@@ -649,6 +717,10 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -669,26 +741,24 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button btnLine;
+        private System.Windows.Forms.Button rdCircle;
+        private System.Windows.Forms.Button rbRectangle2;
+        private System.Windows.Forms.Button btnRoundedRect;
+        private System.Windows.Forms.Button rbTriangle;
+        private System.Windows.Forms.Button btnRightTriangle;
+        private System.Windows.Forms.Button btndiamond;
+        private System.Windows.Forms.Button btnPentagon;
+        private System.Windows.Forms.Button btnLeftArround;
+        private System.Windows.Forms.Button btnRightArround;
+        private System.Windows.Forms.Button btnUpArrow;
+        private System.Windows.Forms.Button btnDownArrow;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button colorDialog;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -698,6 +768,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button brush;
+        private System.Windows.Forms.ColorDialog colorDialog2;
+        private System.Windows.Forms.RadioButton rdpattern;
+        private System.Windows.Forms.RadioButton rdNoPattern;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 

@@ -7,25 +7,23 @@ using System.Threading.Tasks;
 
 namespace MyPaint.Entities
 {
-    internal class MyRectangle : Shape
+    internal class MyColorRectangle : MyRectangle
     {
-        public MyRectangle(Point sPoint, Point ePoint, int borderWidth, Color borderColor)
+        public Color fillColor;
+        public MyColorRectangle(Point sPoint, Point ePoint, int borderWidth,Color borderColor,  Color fillColor) : base(sPoint, ePoint, borderWidth, borderColor)
         {
-            this.sPoint = sPoint;
-            this.width = ePoint.X;
-            this.height = ePoint.Y;
-            this.borderWidth = borderWidth;
-            this.borderColor = borderColor;
+            this.fillColor = fillColor;
         }
         public override void Draw(Graphics g)
         {
-            Pen borderPen = new Pen(borderColor, borderWidth);
+            Brush brushColor = new SolidBrush(fillColor);
             int x = sPoint.X < width ? sPoint.X : width;
             int y = sPoint.Y < height ? sPoint.Y : height;
             int w = Math.Abs(sPoint.X - width);
             int h = Math.Abs(sPoint.Y - height);
             Rectangle rc = new Rectangle(x, y, w, h);
-            g.DrawRectangle(borderPen, rc);
+            g.DrawRectangle(new Pen(Color.Black), rc);
+            g.FillRectangle(brushColor, rc);
         }
     }
 }
