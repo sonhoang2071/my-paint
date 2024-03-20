@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyPaint.Entities
 {
-    public class ListState : IListState
+    public class ListState : IListState, ICopy
     {
         private List<IDraw> list;
         public ListState()

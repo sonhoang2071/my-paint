@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Interfaces\ICopy.cs" />
     <Compile Include="Entities\Interfaces\IListState.cs" />
     <Compile Include="Entities\States\ListController.cs" />
     <Compile Include="Entities\States\ListState.cs" />
