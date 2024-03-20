@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MyPaint.Entities
 {
-    public interface IDraw
+    public interface IFillStrategy
     {
-        void Draw(Graphics g);
+        void Fill(Graphics g, MyPolygon polygon, Color color);
     }
 }

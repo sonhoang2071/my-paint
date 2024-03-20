@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MyPaint.Entities
 {
-    public interface IDraw
+    public interface ICalPointStrategy
     {
-        void Draw(Graphics g);
+        Point[] CalculatePoints(Point sPoint, int width, int height);
     }
 }

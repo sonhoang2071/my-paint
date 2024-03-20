@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MyPaint.Entities
 {
-    public interface IDraw
+    public enum FillType
     {
-        void Draw(Graphics g);
+        NoFill,
+        FullFill,
+        PatternFill
     }
 }
