@@ -30,7 +30,7 @@
         {
             this.btnSave = new System.Windows.Forms.Button();
             this.borderColor = new System.Windows.Forms.ColorDialog();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbRectangle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,19 +49,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.colorDialog = new System.Windows.Forms.Button();
+            this.border = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.brush = new System.Windows.Forms.Button();
             this.brushColor = new System.Windows.Forms.ColorDialog();
-            this.rdPatternFill = new System.Windows.Forms.RadioButton();
-            this.rdNoFill = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdPatternFill = new System.Windows.Forms.RadioButton();
             this.rdFullFill = new System.Windows.Forms.RadioButton();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.rdNoFill = new System.Windows.Forms.RadioButton();
+            this.btnRedo = new System.Windows.Forms.Button();
+            this.btnUndo = new System.Windows.Forms.Button();
+            this.btnSize2 = new System.Windows.Forms.Button();
+            this.btnSize4 = new System.Windows.Forms.Button();
+            this.btnSize3 = new System.Windows.Forms.Button();
+            this.btnSize1 = new System.Windows.Forms.Button();
             this.pic = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,7 +76,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSave.Location = new System.Drawing.Point(1167, 28);
+            this.btnSave.Location = new System.Drawing.Point(1176, 16);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
@@ -83,19 +85,19 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button26
+            // btnRefresh
             // 
-            this.button26.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button26.Location = new System.Drawing.Point(1167, 65);
-            this.button26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(100, 28);
-            this.button26.TabIndex = 10;
-            this.button26.Text = "Refresh";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRefresh.Location = new System.Drawing.Point(1176, 53);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(100, 28);
+            this.btnRefresh.TabIndex = 10;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // panel2
             // 
@@ -114,7 +116,7 @@
             this.panel2.Controls.Add(this.btndiamond);
             this.panel2.Controls.Add(this.btnPentagon);
             this.panel2.Controls.Add(this.btnRightArround);
-            this.panel2.Location = new System.Drawing.Point(102, 14);
+            this.panel2.Location = new System.Drawing.Point(172, 16);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 137);
@@ -300,7 +302,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(471, 14);
+            this.panel3.Location = new System.Drawing.Point(570, 16);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 138);
@@ -321,8 +323,8 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.colorDialog);
-            this.panel4.Location = new System.Drawing.Point(818, 14);
+            this.panel4.Controls.Add(this.border);
+            this.panel4.Location = new System.Drawing.Point(871, 16);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(96, 102);
@@ -341,20 +343,20 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Border";
             // 
-            // colorDialog
+            // border
             // 
-            this.colorDialog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.border.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.colorDialog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.colorDialog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.colorDialog.Image = global::MyPaint.Properties.Resources.colors__1_;
-            this.colorDialog.Location = new System.Drawing.Point(12, 2);
-            this.colorDialog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.colorDialog.Name = "colorDialog";
-            this.colorDialog.Size = new System.Drawing.Size(69, 66);
-            this.colorDialog.TabIndex = 9;
-            this.colorDialog.UseVisualStyleBackColor = true;
-            this.colorDialog.Click += new System.EventHandler(this.button25_Click);
+            this.border.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.border.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.border.Image = global::MyPaint.Properties.Resources.colors__1_;
+            this.border.Location = new System.Drawing.Point(12, 2);
+            this.border.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.border.Name = "border";
+            this.border.Size = new System.Drawing.Size(69, 66);
+            this.border.TabIndex = 9;
+            this.border.UseVisualStyleBackColor = true;
+            this.border.Click += new System.EventHandler(this.border_Click);
             // 
             // panel5
             // 
@@ -362,7 +364,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.brush);
-            this.panel5.Location = new System.Drawing.Point(688, 14);
+            this.panel5.Location = new System.Drawing.Point(741, 16);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(113, 102);
@@ -396,129 +398,145 @@
             this.brush.UseVisualStyleBackColor = true;
             this.brush.Click += new System.EventHandler(this.brush_Click);
             // 
-            // rdPatternFill
-            // 
-            this.rdPatternFill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdPatternFill.AutoSize = true;
-            this.rdPatternFill.Location = new System.Drawing.Point(27, 86);
-            this.rdPatternFill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdPatternFill.Name = "rdPatternFill";
-            this.rdPatternFill.Size = new System.Drawing.Size(90, 20);
-            this.rdPatternFill.TabIndex = 15;
-            this.rdPatternFill.TabStop = true;
-            this.rdPatternFill.Text = "Pattern Fill";
-            this.rdPatternFill.UseVisualStyleBackColor = true;
-            this.rdPatternFill.CheckedChanged += new System.EventHandler(this.rdPatternFill_CheckedChanged);
-            // 
-            // rdNoFill
-            // 
-            this.rdNoFill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdNoFill.AutoSize = true;
-            this.rdNoFill.Checked = true;
-            this.rdNoFill.Location = new System.Drawing.Point(27, 27);
-            this.rdNoFill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdNoFill.Name = "rdNoFill";
-            this.rdNoFill.Size = new System.Drawing.Size(66, 20);
-            this.rdNoFill.TabIndex = 16;
-            this.rdNoFill.TabStop = true;
-            this.rdNoFill.Text = "No Fill";
-            this.rdNoFill.UseVisualStyleBackColor = true;
-            this.rdNoFill.CheckedChanged += new System.EventHandler(this.rdNoFill_CheckedChanged);
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.rdFullFill);
             this.groupBox3.Controls.Add(this.rdPatternFill);
+            this.groupBox3.Controls.Add(this.rdFullFill);
             this.groupBox3.Controls.Add(this.rdNoFill);
-            this.groupBox3.Location = new System.Drawing.Point(953, 14);
+            this.groupBox3.Location = new System.Drawing.Point(999, 11);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox3.Size = new System.Drawing.Size(147, 128);
+            this.groupBox3.Size = new System.Drawing.Size(139, 128);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Type Fill";
             // 
+            // rdPatternFill
+            // 
+            this.rdPatternFill.AutoSize = true;
+            this.rdPatternFill.Location = new System.Drawing.Point(15, 77);
+            this.rdPatternFill.Name = "rdPatternFill";
+            this.rdPatternFill.Size = new System.Drawing.Size(90, 20);
+            this.rdPatternFill.TabIndex = 2;
+            this.rdPatternFill.Text = "Pattern Fill";
+            this.rdPatternFill.UseVisualStyleBackColor = true;
+            this.rdPatternFill.CheckedChanged += new System.EventHandler(this.rdPatternFill_CheckedChanged);
+            // 
             // rdFullFill
             // 
             this.rdFullFill.AutoSize = true;
-            this.rdFullFill.Location = new System.Drawing.Point(27, 55);
-            this.rdFullFill.Margin = new System.Windows.Forms.Padding(4);
+            this.rdFullFill.Location = new System.Drawing.Point(15, 51);
             this.rdFullFill.Name = "rdFullFill";
-            this.rdFullFill.Size = new System.Drawing.Size(69, 20);
-            this.rdFullFill.TabIndex = 18;
-            this.rdFullFill.TabStop = true;
-            this.rdFullFill.Text = "Full Fill";
+            this.rdFullFill.Size = new System.Drawing.Size(66, 20);
+            this.rdFullFill.TabIndex = 1;
+            this.rdFullFill.Text = "FullFill";
             this.rdFullFill.UseVisualStyleBackColor = true;
             this.rdFullFill.CheckedChanged += new System.EventHandler(this.rdFullFill_CheckedChanged);
             // 
-            // button22
+            // rdNoFill
             // 
-            this.button22.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button22.Image = global::MyPaint.Properties.Resources.line__2_;
-            this.button22.Location = new System.Drawing.Point(546, 25);
-            this.button22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(60, 43);
-            this.button22.TabIndex = 8;
-            this.button22.Text = "2px";
-            this.button22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.rdNoFill.AutoSize = true;
+            this.rdNoFill.Checked = true;
+            this.rdNoFill.Location = new System.Drawing.Point(15, 25);
+            this.rdNoFill.Name = "rdNoFill";
+            this.rdNoFill.Size = new System.Drawing.Size(63, 20);
+            this.rdNoFill.TabIndex = 0;
+            this.rdNoFill.TabStop = true;
+            this.rdNoFill.Text = "NoFill";
+            this.rdNoFill.UseVisualStyleBackColor = true;
+            this.rdNoFill.CheckedChanged += new System.EventHandler(this.rdNoFill_CheckedChanged);
             // 
-            // button24
+            // btnRedo
             // 
-            this.button24.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button24.Image = global::MyPaint.Properties.Resources.line__2_;
-            this.button24.Location = new System.Drawing.Point(546, 79);
-            this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(60, 43);
-            this.button24.TabIndex = 8;
-            this.button24.Text = "4px";
-            this.button24.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.btnRedo.BackColor = System.Drawing.SystemColors.Window;
+            this.btnRedo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRedo.Image = global::MyPaint.Properties.Resources.redo;
+            this.btnRedo.Location = new System.Drawing.Point(107, 47);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(39, 39);
+            this.btnRedo.TabIndex = 19;
+            this.btnRedo.UseVisualStyleBackColor = false;
+            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
             // 
-            // button23
+            // btnUndo
             // 
-            this.button23.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button23.Image = global::MyPaint.Properties.Resources.line__2_;
-            this.button23.Location = new System.Drawing.Point(479, 79);
-            this.button23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(60, 43);
-            this.button23.TabIndex = 8;
-            this.button23.Text = "3px";
-            this.button23.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.btnUndo.Image = global::MyPaint.Properties.Resources.undo;
+            this.btnUndo.Location = new System.Drawing.Point(53, 47);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(39, 39);
+            this.btnUndo.TabIndex = 18;
+            this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
-            // button21
+            // btnSize2
             // 
-            this.button21.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button21.Image = global::MyPaint.Properties.Resources.line__2_;
-            this.button21.Location = new System.Drawing.Point(479, 25);
-            this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(60, 43);
-            this.button21.TabIndex = 8;
-            this.button21.Text = "1px";
-            this.button21.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.btnSize2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSize2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnSize2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSize2.Image = global::MyPaint.Properties.Resources.line__2_;
+            this.btnSize2.Location = new System.Drawing.Point(645, 27);
+            this.btnSize2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSize2.Name = "btnSize2";
+            this.btnSize2.Size = new System.Drawing.Size(60, 43);
+            this.btnSize2.TabIndex = 8;
+            this.btnSize2.Text = "2px";
+            this.btnSize2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSize2.UseVisualStyleBackColor = true;
+            this.btnSize2.Click += new System.EventHandler(this.btnSize2_Click);
+            // 
+            // btnSize4
+            // 
+            this.btnSize4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSize4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnSize4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSize4.Image = global::MyPaint.Properties.Resources.line__2_;
+            this.btnSize4.Location = new System.Drawing.Point(645, 81);
+            this.btnSize4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSize4.Name = "btnSize4";
+            this.btnSize4.Size = new System.Drawing.Size(60, 43);
+            this.btnSize4.TabIndex = 8;
+            this.btnSize4.Text = "4px";
+            this.btnSize4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSize4.UseVisualStyleBackColor = true;
+            this.btnSize4.Click += new System.EventHandler(this.btnSize4_Click);
+            // 
+            // btnSize3
+            // 
+            this.btnSize3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSize3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnSize3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSize3.Image = global::MyPaint.Properties.Resources.line__2_;
+            this.btnSize3.Location = new System.Drawing.Point(578, 81);
+            this.btnSize3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSize3.Name = "btnSize3";
+            this.btnSize3.Size = new System.Drawing.Size(60, 43);
+            this.btnSize3.TabIndex = 8;
+            this.btnSize3.Text = "3px";
+            this.btnSize3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSize3.UseVisualStyleBackColor = true;
+            this.btnSize3.Click += new System.EventHandler(this.btnSize3_Click);
+            // 
+            // btnSize1
+            // 
+            this.btnSize1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSize1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnSize1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSize1.Image = global::MyPaint.Properties.Resources.line__2_;
+            this.btnSize1.Location = new System.Drawing.Point(578, 27);
+            this.btnSize1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSize1.Name = "btnSize1";
+            this.btnSize1.Size = new System.Drawing.Size(60, 43);
+            this.btnSize1.TabIndex = 8;
+            this.btnSize1.Text = "1px";
+            this.btnSize1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSize1.UseVisualStyleBackColor = true;
+            this.btnSize1.Click += new System.EventHandler(this.btnSize1_Click);
             // 
             // pic
             // 
+            this.pic.BackColor = System.Drawing.SystemColors.Window;
             this.pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic.Location = new System.Drawing.Point(12, 157);
             this.pic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -535,12 +553,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1336, 761);
+            this.Controls.Add(this.btnRedo);
+            this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button21);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnSize2);
+            this.Controls.Add(this.btnSize4);
+            this.Controls.Add(this.btnSize3);
+            this.Controls.Add(this.btnSize1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pic);
             this.Controls.Add(this.panel2);
@@ -580,13 +600,13 @@
         private System.Windows.Forms.Button btnRightArround;
         private System.Windows.Forms.Button btnUpArrow;
         private System.Windows.Forms.Button btnDownArrow;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button btnSize1;
+        private System.Windows.Forms.Button btnSize2;
+        private System.Windows.Forms.Button btnSize3;
+        private System.Windows.Forms.Button btnSize4;
         private System.Windows.Forms.ColorDialog borderColor;
-        private System.Windows.Forms.Button colorDialog;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button border;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
@@ -597,11 +617,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button brush;
         private System.Windows.Forms.ColorDialog brushColor;
-        private System.Windows.Forms.RadioButton rdPatternFill;
-        private System.Windows.Forms.RadioButton rdNoFill;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rdFullFill;
         private System.Windows.Forms.Button rbRectangle;
+        private System.Windows.Forms.Button btnUndo;
+        private System.Windows.Forms.Button btnRedo;
+        private System.Windows.Forms.RadioButton rdPatternFill;
+        private System.Windows.Forms.RadioButton rdFullFill;
+        private System.Windows.Forms.RadioButton rdNoFill;
     }
 }
 

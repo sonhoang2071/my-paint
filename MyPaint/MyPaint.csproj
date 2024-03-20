@@ -46,34 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\DiamondStrategy.cs" />
-    <Compile Include="Entities\DownArrowStrategy.cs" />
-    <Compile Include="Entities\FillDecorator.cs" />
-    <Compile Include="Entities\FillFactory.cs" />
-    <Compile Include="Entities\FullFillStrategy.cs" />
-    <Compile Include="Entities\LineStrategy.cs" />
-    <Compile Include="Entities\PatternFillStrategy.cs" />
-    <Compile Include="Entities\FillType.cs" />
-    <Compile Include="Entities\ICalPointStrategy.cs" />
-    <Compile Include="Entities\IDraw.cs" />
-    <Compile Include="Entities\IFillStrategy.cs" />
-    <Compile Include="Entities\LeftArrowStrategy.cs" />
-    <Compile Include="Entities\MyCircle.cs" />
-    <Compile Include="Entities\MyCircleToPolygonAdapter.cs" />
-    <Compile Include="Entities\MyLine.cs" />
-    <Compile Include="Entities\MyLineToPolygonAdapter.cs" />
-    <Compile Include="Entities\MyPolygon.cs" />
-    <Compile Include="Entities\MyRectangle.cs" />
-    <Compile Include="Entities\PentagonStrategy.cs" />
-    <Compile Include="Entities\RectangleStrategy.cs" />
-    <Compile Include="Entities\RightArrowStrategy.cs" />
-    <Compile Include="Entities\RightTriangleStrategy.cs" />
-    <Compile Include="Entities\Shape.cs" />
-    <Compile Include="Entities\ShapeFactory.cs" />
-    <Compile Include="Entities\ShapeType.cs" />
-    <Compile Include="Entities\SquareStrategy.cs" />
-    <Compile Include="Entities\TriangleStrategy.cs" />
-    <Compile Include="Entities\UpArrowStrategy.cs" />
+    <Compile Include="Entities\Interfaces\IListState.cs" />
+    <Compile Include="Entities\States\ListController.cs" />
+    <Compile Include="Entities\States\ListState.cs" />
+    <Compile Include="Entities\Strategies\DiamondStrategy.cs" />
+    <Compile Include="Entities\Strategies\DownArrowStrategy.cs" />
+    <Compile Include="Entities\Decorators\FillDecorator.cs" />
+    <Compile Include="Entities\Factories\FillFactory.cs" />
+    <Compile Include="Entities\Strategies\FullFillStrategy.cs" />
+    <Compile Include="Entities\Strategies\LineStrategy.cs" />
+    <Compile Include="Entities\Strategies\PatternFillStrategy.cs" />
+    <Compile Include="Entities\Enums\FillType.cs" />
+    <Compile Include="Entities\Interfaces\ICalPointStrategy.cs" />
+    <Compile Include="Entities\Interfaces\IDraw.cs" />
+    <Compile Include="Entities\Interfaces\IFillStrategy.cs" />
+    <Compile Include="Entities\Strategies\LeftArrowStrategy.cs" />
+    <Compile Include="Entities\Subjects\MyCircle.cs" />
+    <Compile Include="Entities\Adapters\MyCircleToPolygonAdapter.cs" />
+    <Compile Include="Entities\Subjects\MyLine.cs" />
+    <Compile Include="Entities\Adapters\MyLineToPolygonAdapter.cs" />
+    <Compile Include="Entities\Subjects\MyPolygon.cs" />
+    <Compile Include="Entities\Subjects\MyRectangle.cs" />
+    <Compile Include="Entities\Strategies\PentagonStrategy.cs" />
+    <Compile Include="Entities\Strategies\RectangleStrategy.cs" />
+    <Compile Include="Entities\Strategies\RightArrowStrategy.cs" />
+    <Compile Include="Entities\Strategies\RightTriangleStrategy.cs" />
+    <Compile Include="Entities\Abstracts\Shape.cs" />
+    <Compile Include="Entities\Factories\ShapeFactory.cs" />
+    <Compile Include="Entities\Enums\ShapeType.cs" />
+    <Compile Include="Entities\Strategies\SquareStrategy.cs" />
+    <Compile Include="Entities\Strategies\TriangleStrategy.cs" />
+    <Compile Include="Entities\Strategies\UpArrowStrategy.cs" />
     <Compile Include="GraphicForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +185,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

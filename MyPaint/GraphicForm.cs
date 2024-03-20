@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,13 +19,13 @@ namespace MyPaint
         Graphics ga;
         Graphics g;
         Point sPoint;
-        bool moving;
-        ShapeType typeShape;
-        FillType fillType;
-        FillFactory factory = FillFactory.GetInstance;
-        int line;
-        LinkedList<IDraw> shapes;
         IDraw p;
+        ShapeType typeShape;
+        FillType fillType; 
+        FillFactory factory = FillFactory.GetInstance;
+        ListController controller = ListController.GetListController;
+        int line;
+        bool moving;
         public GraphicForm()
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace MyPaint
             g = pic.CreateGraphics();
             sPoint = new Point(0, 0);
             moving = false;
-            shapes = new LinkedList<IDraw>();
             line = 2;
         }
         private void drawing_MouseDown(object sender, MouseEventArgs e)
@@ -48,13 +48,14 @@ namespace MyPaint
             if (moving)
             {
                 RefreshPicture();
-                HandleDraw(e.Location);
+                HandleDraw(e.Location);        
             }
         }       
         private void drawing_MouseUp(object sender, MouseEventArgs e)
         {
             HandleAdd(e.Location);   
             moving = false;
+            RefreshPicture();
         }
         public void HandleDraw(Point e)
         {
@@ -64,53 +65,57 @@ namespace MyPaint
         public void HandleAdd(Point e)
         {
             HandleDraw(e);
-            shapes.AddLast(p);
+            controller.Add(p);
         }
         private void RefreshPicture()
         {
             g.Clear(Color.White);
-            foreach (IDraw s in shapes)
-            {
-                s.Draw(g);
-            }
-            foreach (IDraw s in shapes)
-            {
-                s.Draw(ga);
-            }
+            ga.Clear(Color.White);
+            controller.Draw(g, ga);
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string  pathSave= @"C:\Users\Admin\Documents\image.png";
-            bm.Save(pathSave, System.Drawing.Imaging.ImageFormat.Png);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PNG files|*.png";
+            saveFileDialog.Title = "Save an Image File";
+            saveFileDialog.ShowDialog();
+
+            if (saveFileDialog.FileName != "")
+            { 
+                bm.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                MessageBox.Show("Saved Successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
-        private void button26_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
             g.Clear(Color.White);
-            shapes = new LinkedList<IDraw>();
+            ga.Clear(Color.White); 
+            controller.Refresh();
         }
-        private void button21_Click(object sender, EventArgs e)
+        private void btnSize1_Click(object sender, EventArgs e)
         {
             line = 2;
         }
-        private void button22_Click(object sender, EventArgs e)
+        private void btnSize2_Click(object sender, EventArgs e)
         {
             line = 4;
         }
-        private void button23_Click(object sender, EventArgs e)
+        private void btnSize3_Click(object sender, EventArgs e)
         {
             line = 6;
         }
-        private void button24_Click(object sender, EventArgs e)
+        private void btnSize4_Click(object sender, EventArgs e)
         {
             line = 8;
-        }
-        private void button25_Click(object sender, EventArgs e)
-        {
-            borderColor.ShowDialog();
         }
         private void brush_Click(object sender, EventArgs e)
         {
             brushColor.ShowDialog();
+        }
+        private void border_Click(object sender, EventArgs e)
+        {
+            borderColor.ShowDialog();
         }
         private void rbRectangle2_Click(object sender, EventArgs e)
         {
@@ -169,17 +174,27 @@ namespace MyPaint
         }
         private void rdFullFill_CheckedChanged(object sender, EventArgs e)
         {
-            if( rdFullFill.Checked)
+            if (rdFullFill.Checked)
             {
                 fillType = FillType.FullFill;
             }
         }
         private void rdPatternFill_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdPatternFill.Checked)
+            if (rdPatternFill.Checked)
             {
                 fillType = FillType.PatternFill;
             }
+        }
+        private void btnRedo_Click(object sender, EventArgs e)
+        {
+            controller.Redo();
+            RefreshPicture();
+        }
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            controller.Undo();
+            RefreshPicture();
         }
     }
 }
